@@ -1,0 +1,213 @@
+\hypertarget{class_lyrics}{}\doxysection{Lyrics Class Reference}
+\label{class_lyrics}\index{Lyrics@{Lyrics}}
+
+
+\mbox{\hyperlink{lyrics_8h}{Lyrics.\+h}} CS 3307 -\/ Raspberry\+Oke.  
+
+
+
+
+{\ttfamily \#include $<$lyrics.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_lyrics_1_1_lyric}{Lyric}}
+\begin{DoxyCompactList}\small\item\em structure of a line of lyric\+: time (from mm\+:ss to seconds), lrc\+\_\+content (the actual literal string of lyric) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lyrics_af1599dc22a302768ada068a283f69d2b}{Lyrics}} (std\+::string \&lyrics\+\_\+file, Q\+String\+List \&lyrics\+\_\+list, Q\+Map$<$ qint64, qint64 $>$ \&time\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Constructor of the lyrics class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_lyrics_a3d3078f793e7e029ab7f84fdf9029d54}{Lyrics}} ()
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+default constructor \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_lyrics_a207ab80e935a295c59a5c4c2c4f36ec3}{$\sim$\+Lyrics}} ()
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+the destructor \end{quote}
+\end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_lyrics_a85a1fd9b1376e52e474703fa44e9856f}{get\+\_\+lyric}} (long int time)
+\begin{DoxyCompactList}\small\item\em get\+\_\+lyric\+: get a line of lyrics by a given time \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_lyrics_1_1_lyric}{Lyric}} $>$ \mbox{\hyperlink{class_lyrics_af83a0948b2899a5182ad78a1a21c9c2f}{line\+\_\+lyrics}}
+\begin{DoxyCompactList}\small\item\em line\+\_\+lyrics\+: store each line of lyrics with time tag and content in different place. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_lyrics_aa5083b3cd572cdd365f2fec8b9b72e0e}{file\+\_\+analysis}} (std\+::string \&lyrics\+\_\+file)
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+store each line of lyrics with time tag and content in one string \end{quote}
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lyrics_ad63ae07f560cc6dc8c04ddf5a98e6c6f}{lyrics\+\_\+analysis}} (Q\+String\+List \&lyrics\+\_\+list, Q\+Map$<$ qint64, qint64 $>$ \&time\+\_\+index)
+\begin{DoxyCompactList}\small\item\em lyrics\+\_\+analysis\+: analyze the lyrics string, separate the context and time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_lyrics_a7622a4de4a6e2e8f0dbd462924346911}{origin\+\_\+lyrics}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{lyrics_8h}{Lyrics.\+h}} CS 3307 -\/ Raspberry\+Oke. 
+
+The header file. Give instructions on things should be done with the \mbox{\hyperlink{lyrics_8cpp}{Lyrics.\+cpp}} file 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lyrics_af1599dc22a302768ada068a283f69d2b}\label{class_lyrics_af1599dc22a302768ada068a283f69d2b}} 
+\index{Lyrics@{Lyrics}!Lyrics@{Lyrics}}
+\index{Lyrics@{Lyrics}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{Lyrics()}{Lyrics()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Lyrics\+::\+Lyrics (\begin{DoxyParamCaption}\item[{std\+::string \&}]{lyrics\+\_\+file,  }\item[{Q\+String\+List \&}]{lyrics\+\_\+list,  }\item[{Q\+Map$<$ qint64, qint64 $>$ \&}]{time\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Constructor of the lyrics class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lyrics\+\_\+file} & the file path for lyrics file \\
+\hline
+{\em lyrics\+\_\+list} & a stringlist that is going to store all literal contents \\
+\hline
+{\em time\+\_\+index} & a map containing pairs of index (position of a line of lyrics in the whole lyrics file) and corresponding time tag of that line of lyrics \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lyrics_a3d3078f793e7e029ab7f84fdf9029d54}\label{class_lyrics_a3d3078f793e7e029ab7f84fdf9029d54}} 
+\index{Lyrics@{Lyrics}!Lyrics@{Lyrics}}
+\index{Lyrics@{Lyrics}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{Lyrics()}{Lyrics()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Lyrics\+::\+Lyrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\begin{quote}
+default constructor \end{quote}
+
+
+\mbox{\Hypertarget{class_lyrics_a207ab80e935a295c59a5c4c2c4f36ec3}\label{class_lyrics_a207ab80e935a295c59a5c4c2c4f36ec3}} 
+\index{Lyrics@{Lyrics}!````~Lyrics@{$\sim$Lyrics}}
+\index{````~Lyrics@{$\sim$Lyrics}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{$\sim$Lyrics()}{~Lyrics()}}
+{\footnotesize\ttfamily Lyrics\+::$\sim$\+Lyrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\begin{quote}
+the destructor \end{quote}
+
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lyrics_aa5083b3cd572cdd365f2fec8b9b72e0e}\label{class_lyrics_aa5083b3cd572cdd365f2fec8b9b72e0e}} 
+\index{Lyrics@{Lyrics}!file\_analysis@{file\_analysis}}
+\index{file\_analysis@{file\_analysis}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{file\_analysis()}{file\_analysis()}}
+{\footnotesize\ttfamily void Lyrics\+::file\+\_\+analysis (\begin{DoxyParamCaption}\item[{std\+::string \&}]{lyrics\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\begin{quote}
+store each line of lyrics with time tag and content in one string \end{quote}
+
+
+file\+\_\+analysis\+: splite lrc file to get each line of lyrics (with time tag) and save the string to \char`\"{}origin\+\_\+lryics\char`\"{} vector. 
+\begin{DoxyParams}{Parameters}
+{\em lyrics\+\_\+file} & file path for lyrcis file \\
+\hline
+\end{DoxyParams}
+\begin{quote}
+file does not exist \end{quote}
+
+
+\begin{quote}
+while loop for going through each line of the file \end{quote}
+
+
+\begin{quote}
+get the content of each line which stores information of lyrics \end{quote}
+
+
+\begin{quote}
+add the content to vector \char`\"{}orgin\+\_\+lyrics\char`\"{} \end{quote}
+\mbox{\Hypertarget{class_lyrics_a85a1fd9b1376e52e474703fa44e9856f}\label{class_lyrics_a85a1fd9b1376e52e474703fa44e9856f}} 
+\index{Lyrics@{Lyrics}!get\_lyric@{get\_lyric}}
+\index{get\_lyric@{get\_lyric}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{get\_lyric()}{get\_lyric()}}
+{\footnotesize\ttfamily string Lyrics\+::get\+\_\+lyric (\begin{DoxyParamCaption}\item[{long int}]{time }\end{DoxyParamCaption})}
+
+
+
+get\+\_\+lyric\+: get a line of lyrics by a given time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the line of lyrics by that given time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lyrics_ad63ae07f560cc6dc8c04ddf5a98e6c6f}\label{class_lyrics_ad63ae07f560cc6dc8c04ddf5a98e6c6f}} 
+\index{Lyrics@{Lyrics}!lyrics\_analysis@{lyrics\_analysis}}
+\index{lyrics\_analysis@{lyrics\_analysis}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{lyrics\_analysis()}{lyrics\_analysis()}}
+{\footnotesize\ttfamily void Lyrics\+::lyrics\+\_\+analysis (\begin{DoxyParamCaption}\item[{Q\+String\+List \&}]{lyrics\+\_\+list,  }\item[{Q\+Map$<$ qint64, qint64 $>$ \&}]{time\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+lyrics\+\_\+analysis\+: analyze the lyrics string, separate the context and time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lyrics\+\_\+list} & a list containing all literal lines of lyrics, not including time tags \\
+\hline
+{\em time\+\_\+index} & a map containing pairs of index (position of a line of lyrics in the whole lyrics file) and corresponding time tag of that line of lyrics \\
+\hline
+\end{DoxyParams}
+\begin{quote}
+find the last \textquotesingle{}\mbox{]}\textquotesingle{} in the string \end{quote}
+
+
+\begin{quote}
+the text from the indexth charater to the last character of string is lyrics content \end{quote}
+
+
+\begin{quote}
+find the first \textquotesingle{}\mbox{[}\textquotesingle{} in the string \end{quote}
+
+
+\begin{quote}
+min\+\_\+index stores the place of first \char`\"{}\+:\char`\"{} \end{quote}
+
+
+\begin{quote}
+sec\+\_\+index stores the place of first \char`\"{}.\char`\"{} \end{quote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_lyrics_af83a0948b2899a5182ad78a1a21c9c2f}\label{class_lyrics_af83a0948b2899a5182ad78a1a21c9c2f}} 
+\index{Lyrics@{Lyrics}!line\_lyrics@{line\_lyrics}}
+\index{line\_lyrics@{line\_lyrics}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{line\_lyrics}{line\_lyrics}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_lyrics_1_1_lyric}{Lyric}}$>$ Lyrics\+::line\+\_\+lyrics}
+
+
+
+line\+\_\+lyrics\+: store each line of lyrics with time tag and content in different place. 
+
+\mbox{\Hypertarget{class_lyrics_a7622a4de4a6e2e8f0dbd462924346911}\label{class_lyrics_a7622a4de4a6e2e8f0dbd462924346911}} 
+\index{Lyrics@{Lyrics}!origin\_lyrics@{origin\_lyrics}}
+\index{origin\_lyrics@{origin\_lyrics}!Lyrics@{Lyrics}}
+\doxysubsubsection{\texorpdfstring{origin\_lyrics}{origin\_lyrics}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Lyrics\+::origin\+\_\+lyrics\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lyrics_8h}{lyrics.\+h}}\item 
+\mbox{\hyperlink{lyrics_8cpp}{lyrics.\+cpp}}\end{DoxyCompactItemize}

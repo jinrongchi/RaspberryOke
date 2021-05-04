@@ -1,0 +1,226 @@
+\hypertarget{class_testing}{}\doxysection{Testing Class Reference}
+\label{class_testing}\index{Testing@{Testing}}
+
+
+{\ttfamily \#include $<$testing.\+h$>$}
+
+Inheritance diagram for Testing\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_testing}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_testing_1_1_ftp_file}{Ftp\+File}}
+\begin{DoxyCompactList}\small\item\em The struct to store the file name and file stream to transfer the files from server to local. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_testing_aa4585eeafc06c4ba738ac547956dea9e}{on\+Play\+Btn\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em on\+Play\+Btn\+Clicked\+: after the user hit the play button, this slot will handle this request by passing lyrics file and song file to the player interface with the help of the hit\+Play\+Btn signal to notify the media/player class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_testing_a31451d43453ff27ca5011a613a94b6fd}{hit\+Play\+Btn}} (Q\+String song\+\_\+path, Q\+String lyrics\+\_\+path)
+\begin{DoxyCompactList}\small\item\em hit\+Play\+Btn\+: a signal to notify things are coming for media/player class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_testing_abf2586b4358ca70c124f864dc241fccd}{Testing}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor of the class\+: setting up ui, initiating objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_testing_ac21e3492d23395d194fe2fd8e2292e71}{$\sim$\+Testing}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Vector$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$ $>$ \mbox{\hyperlink{class_testing_a0541f3f4e4cd7c09a68a780892c27d91}{get\+Song\+\_\+\+Vec}} ()
+\begin{DoxyCompactList}\small\item\em get\+Song\+\_\+\+Vec\+: we obtain a list of the songs by using this method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_testing_a13f6c6926bc8eadcd88b9b15f578e91c}{download\+File}} (std\+::string file\+Address, std\+::string output\+Address)
+\begin{DoxyCompactList}\small\item\em Download the file by using a ftp address with username and password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_testing_a9cabfeffa3cff50a7e437af7e18b39fd}{f\+Download}} (void $\ast$buffer, size\+\_\+t size, size\+\_\+t nmemb, void $\ast$stream)
+\begin{DoxyCompactList}\small\item\em The helper to write the file from file stream to a specific local address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ui_1_1_testing}{Ui\+::\+Testing}} $\ast$ \mbox{\hyperlink{class_testing_abd2075582a10fbdca97ae7baa4c02065}{ui}}
+\item 
+Q\+Standard\+Item\+Model $\ast$ \mbox{\hyperlink{class_testing_a15c4addb2745284cddc92bf6cd6ace39}{model}}
+\begin{DoxyCompactList}\small\item\em model, table\+View\+: using M\+VC, first set up the model which has the access to all the data, then connect the view with the model to display the data. \end{DoxyCompactList}\item 
+Q\+Table\+View $\ast$ \mbox{\hyperlink{class_testing_aaacc39b095520eccac54bab4a4fc4e97}{table\+View}}
+\item 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{class_testing_aad532817d4424ac9f31e7466b48b2279}{play\+Btn}}
+\item 
+Q\+Vector$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$ $>$ \mbox{\hyperlink{class_testing_a8e06295ae9ee4c247a2e03ae36e7117f}{song\+\_\+vec}}
+\begin{DoxyCompactList}\small\item\em song\+\_\+vec\+: this is the vector containing all the song objects. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_testing_a08580118dda2514aaf2312b6d9b8cce9}{xml}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_testing_abf2586b4358ca70c124f864dc241fccd}\label{class_testing_abf2586b4358ca70c124f864dc241fccd}} 
+\index{Testing@{Testing}!Testing@{Testing}}
+\index{Testing@{Testing}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{Testing()}{Testing()}}
+{\footnotesize\ttfamily Testing\+::\+Testing (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class\+: setting up ui, initiating objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_testing_ac21e3492d23395d194fe2fd8e2292e71}\label{class_testing_ac21e3492d23395d194fe2fd8e2292e71}} 
+\index{Testing@{Testing}!````~Testing@{$\sim$Testing}}
+\index{````~Testing@{$\sim$Testing}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{$\sim$Testing()}{~Testing()}}
+{\footnotesize\ttfamily Testing\+::$\sim$\+Testing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_testing_a13f6c6926bc8eadcd88b9b15f578e91c}\label{class_testing_a13f6c6926bc8eadcd88b9b15f578e91c}} 
+\index{Testing@{Testing}!downloadFile@{downloadFile}}
+\index{downloadFile@{downloadFile}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{downloadFile()}{downloadFile()}}
+{\footnotesize\ttfamily int Testing\+::download\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Address,  }\item[{std\+::string}]{output\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Download the file by using a ftp address with username and password. 
+
+Then download the file to the cache folder with outputname. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Address} & a ftp address of the file with username and password \\
+\hline
+{\em output\+Address} & output name for the file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_testing_a9cabfeffa3cff50a7e437af7e18b39fd}\label{class_testing_a9cabfeffa3cff50a7e437af7e18b39fd}} 
+\index{Testing@{Testing}!fDownload@{fDownload}}
+\index{fDownload@{fDownload}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{fDownload()}{fDownload()}}
+{\footnotesize\ttfamily static size\+\_\+t Testing\+::f\+Download (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{nmemb,  }\item[{void $\ast$}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The helper to write the file from file stream to a specific local address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & size of the file \\
+\hline
+{\em stream} & file stream for output \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_testing_a0541f3f4e4cd7c09a68a780892c27d91}\label{class_testing_a0541f3f4e4cd7c09a68a780892c27d91}} 
+\index{Testing@{Testing}!getSong\_Vec@{getSong\_Vec}}
+\index{getSong\_Vec@{getSong\_Vec}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{getSong\_Vec()}{getSong\_Vec()}}
+{\footnotesize\ttfamily Q\+Vector$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$ $>$ Testing\+::get\+Song\+\_\+\+Vec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get\+Song\+\_\+\+Vec\+: we obtain a list of the songs by using this method. 
+
+\begin{DoxyReturn}{Returns}
+a vector containing all song objects. 
+\end{DoxyReturn}
+$<$ the location of the running application
+
+$<$ outputaddress for downloaded xml file
+
+\begin{quote}
+Check if the file is xml file is exist \end{quote}
+
+
+$<$set pointer to the element of the file
+
+locate the new local lyrics file and store the address\mbox{\Hypertarget{class_testing_a31451d43453ff27ca5011a613a94b6fd}\label{class_testing_a31451d43453ff27ca5011a613a94b6fd}} 
+\index{Testing@{Testing}!hitPlayBtn@{hitPlayBtn}}
+\index{hitPlayBtn@{hitPlayBtn}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{hitPlayBtn}{hitPlayBtn}}
+{\footnotesize\ttfamily void Testing\+::hit\+Play\+Btn (\begin{DoxyParamCaption}\item[{Q\+String}]{song\+\_\+path,  }\item[{Q\+String}]{lyrics\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+hit\+Play\+Btn\+: a signal to notify things are coming for media/player class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em song\+\_\+path} & \\
+\hline
+{\em lyrics\+\_\+path} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_testing_aa4585eeafc06c4ba738ac547956dea9e}\label{class_testing_aa4585eeafc06c4ba738ac547956dea9e}} 
+\index{Testing@{Testing}!onPlayBtnClicked@{onPlayBtnClicked}}
+\index{onPlayBtnClicked@{onPlayBtnClicked}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{onPlayBtnClicked}{onPlayBtnClicked}}
+{\footnotesize\ttfamily void Testing\+::on\+Play\+Btn\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+on\+Play\+Btn\+Clicked\+: after the user hit the play button, this slot will handle this request by passing lyrics file and song file to the player interface with the help of the hit\+Play\+Btn signal to notify the media/player class. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_testing_a15c4addb2745284cddc92bf6cd6ace39}\label{class_testing_a15c4addb2745284cddc92bf6cd6ace39}} 
+\index{Testing@{Testing}!model@{model}}
+\index{model@{model}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily Q\+Standard\+Item\+Model$\ast$ Testing\+::model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+model, table\+View\+: using M\+VC, first set up the model which has the access to all the data, then connect the view with the model to display the data. 
+
+\mbox{\Hypertarget{class_testing_aad532817d4424ac9f31e7466b48b2279}\label{class_testing_aad532817d4424ac9f31e7466b48b2279}} 
+\index{Testing@{Testing}!playBtn@{playBtn}}
+\index{playBtn@{playBtn}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{playBtn}{playBtn}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Testing\+::play\+Btn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_testing_a8e06295ae9ee4c247a2e03ae36e7117f}\label{class_testing_a8e06295ae9ee4c247a2e03ae36e7117f}} 
+\index{Testing@{Testing}!song\_vec@{song\_vec}}
+\index{song\_vec@{song\_vec}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{song\_vec}{song\_vec}}
+{\footnotesize\ttfamily Q\+Vector$<$\mbox{\hyperlink{class_song}{Song}}$\ast$$>$ Testing\+::song\+\_\+vec\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+song\+\_\+vec\+: this is the vector containing all the song objects. 
+
+\mbox{\Hypertarget{class_testing_aaacc39b095520eccac54bab4a4fc4e97}\label{class_testing_aaacc39b095520eccac54bab4a4fc4e97}} 
+\index{Testing@{Testing}!tableView@{tableView}}
+\index{tableView@{tableView}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{tableView}{tableView}}
+{\footnotesize\ttfamily Q\+Table\+View$\ast$ Testing\+::table\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_testing_abd2075582a10fbdca97ae7baa4c02065}\label{class_testing_abd2075582a10fbdca97ae7baa4c02065}} 
+\index{Testing@{Testing}!ui@{ui}}
+\index{ui@{ui}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ui_1_1_testing}{Ui\+::\+Testing}}$\ast$ Testing\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_testing_a08580118dda2514aaf2312b6d9b8cce9}\label{class_testing_a08580118dda2514aaf2312b6d9b8cce9}} 
+\index{Testing@{Testing}!xml@{xml}}
+\index{xml@{xml}!Testing@{Testing}}
+\doxysubsubsection{\texorpdfstring{xml}{xml}}
+{\footnotesize\ttfamily Q\+String Testing\+::xml\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testing_8h}{testing.\+h}}\item 
+\mbox{\hyperlink{moc__testing_8cpp}{moc\+\_\+testing.\+cpp}}\item 
+\mbox{\hyperlink{testing_8cpp}{testing.\+cpp}}\end{DoxyCompactItemize}

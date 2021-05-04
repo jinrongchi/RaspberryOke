@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<instance>
+    <songs>
+        <song>
+            <name>Take On Me</name>
+            <artist>a-ha</artist>
+            <genre>New wave</genre>
+            <locationOfSong>/Users/shizhuoran1998/Documents/CS3307/songs/A Real Hero (Drive Original Movie Soundtrack).mp3</locationOfSong>
+            <locationOfLyrics>/Users/shizhuoran1998/Documents/CS3307/lyrics/A Real Hero.lrc</locationOfLyrics>
+            <tempo>1</tempo>
+            <length>3:50</length>
+        </song>
+        <song>
+            <name>A Real Hero</name>
+            <artist>College and Electric Youth</artist>
+            <genre>Synth-pop</genre>
+            <locationOfSong>/Users/shizhuoran1998/Documents/CS3307/songs/A Real Hero (Drive Original Movie Soundtrack).mp3</locationOfSong>
+            <locationOfLyrics>/Users/shizhuoran1998/Documents/CS3307/lyrics/A Real Hero.lrc</locationOfLyrics>
+            <tempo>2</tempo>
+            <length>4:28</length>
+        </song>
+        <song>
+            <name>Believer</name>
+            <artist>Imagine Dragons</artist>
+            <genre>Pop rock</genre>
+            <locationOfSong>/Users/shizhuoran1998/Documents/CS3307/songs/College - A Real Hero.mp3</locationOfSong>
+            <locationOfLyrics>/Users/shizhuoran1998/Documents/CS3307/lyrics/A Real Hero.lrc</locationOfLyrics>
+            <tempo>13</tempo>
+            <length>3:24</length>
+        </song>
+        <song>
+            <name>Bohemian Rhapsody</name>
+            <artist>Queen</artist>
+            <genre>progressive rock</genre>
+            <locationOfSong>/Users/shizhuoran1998/Documents/CS3307/songs/College - A Real Hero.mp3</locationOfSong>
+            <locationOfLyrics>/Users/shizhuoran1998/Documents/CS3307/lyrics/A Real Hero.lrc</locationOfLyrics>
+            <tempo>13</tempo>
+            <length>6:18</length>
+        </song>
+        <song>
+            <name>Cheap Thrills</name>
+            <artist>Sia</artist>
+            <genre>Synthpop</genre>
+            <locationOfSong>/Users/shizhuoran1998/Documents/CS3307/songs/College - A Real Hero.mp3</locationOfSong>
+            <locationOfLyrics>/Users/shizhuoran1998/Documents/CS3307/lyrics/A Real Hero.lrc</locationOfLyrics>
+            <tempo>123123</tempo>
+            <length>4:21</length>
+        </song>
+    </songs>
+</instance>

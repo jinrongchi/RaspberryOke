@@ -1,0 +1,80 @@
+\hypertarget{class_my_time}{}\doxysection{My\+Time Class Reference}
+\label{class_my_time}\index{MyTime@{MyTime}}
+
+
+\mbox{\hyperlink{mytime_8h}{My\+Time.\+h}} CS 3307 -\/ Raspberry\+Oke.  
+
+
+
+
+{\ttfamily \#include $<$mytime.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_time_a17a63ad1cbdaef8be32ce7cc973f942c}{My\+Time}} ()
+\item 
+\mbox{\hyperlink{class_my_time_acd284f9452611ae29d584892ec80f716}{My\+Time}} (int \+\_\+min, int \+\_\+sec)
+\item 
+int \mbox{\hyperlink{class_my_time_a069f7be18cd348619bb942092dac1a45}{from\+\_\+\+Time\+\_\+to\+\_\+int}} (\mbox{\hyperlink{class_my_time}{My\+Time}} lrc\+\_\+time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_my_time_a58fa726da437a308336fcad85cc16a31}{min}} = 0
+\item 
+int \mbox{\hyperlink{class_my_time_aa3a07fc14488f8bde07cb5cb8da2532e}{sec}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{mytime_8h}{My\+Time.\+h}} CS 3307 -\/ Raspberry\+Oke. 
+
+The processing time for each lyrics is specified as \mbox{[}min\+:sec.\+msec\mbox{]} in the lrc files. The class Time is used to stored processing time of each lyrics. Its value will be converted into an integer as \char`\"{}min $\ast$ 60 + sec\char`\"{} for better use of G\+UI code (msec will be ignored) and stored into a vector in \mbox{\hyperlink{lyrics_8cpp}{Lyrics.\+cpp}}
+
+Created by Team 30 Date\+: 29th Oct, 2019 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_my_time_a17a63ad1cbdaef8be32ce7cc973f942c}\label{class_my_time_a17a63ad1cbdaef8be32ce7cc973f942c}} 
+\index{MyTime@{MyTime}!MyTime@{MyTime}}
+\index{MyTime@{MyTime}!MyTime@{MyTime}}
+\doxysubsubsection{\texorpdfstring{MyTime()}{MyTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily My\+Time\+::\+My\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_my_time_acd284f9452611ae29d584892ec80f716}\label{class_my_time_acd284f9452611ae29d584892ec80f716}} 
+\index{MyTime@{MyTime}!MyTime@{MyTime}}
+\index{MyTime@{MyTime}!MyTime@{MyTime}}
+\doxysubsubsection{\texorpdfstring{MyTime()}{MyTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily My\+Time\+::\+My\+Time (\begin{DoxyParamCaption}\item[{int}]{\+\_\+min,  }\item[{int}]{\+\_\+sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_my_time_a069f7be18cd348619bb942092dac1a45}\label{class_my_time_a069f7be18cd348619bb942092dac1a45}} 
+\index{MyTime@{MyTime}!from\_Time\_to\_int@{from\_Time\_to\_int}}
+\index{from\_Time\_to\_int@{from\_Time\_to\_int}!MyTime@{MyTime}}
+\doxysubsubsection{\texorpdfstring{from\_Time\_to\_int()}{from\_Time\_to\_int()}}
+{\footnotesize\ttfamily int My\+Time\+::from\+\_\+\+Time\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_my_time}{My\+Time}}}]{lrc\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}    Function from_Time_to_int
+\end{DoxyVerb}
+ convert Time value into an integer value by basic calculation parameter Time lrc\+\_\+time stores value of minutes and seconds in two variables returns (x seconds) 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_my_time_a58fa726da437a308336fcad85cc16a31}\label{class_my_time_a58fa726da437a308336fcad85cc16a31}} 
+\index{MyTime@{MyTime}!min@{min}}
+\index{min@{min}!MyTime@{MyTime}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily int My\+Time\+::min = 0}
+
+\mbox{\Hypertarget{class_my_time_aa3a07fc14488f8bde07cb5cb8da2532e}\label{class_my_time_aa3a07fc14488f8bde07cb5cb8da2532e}} 
+\index{MyTime@{MyTime}!sec@{sec}}
+\index{sec@{sec}!MyTime@{MyTime}}
+\doxysubsubsection{\texorpdfstring{sec}{sec}}
+{\footnotesize\ttfamily int My\+Time\+::sec = 0}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mytime_8h}{mytime.\+h}}\end{DoxyCompactItemize}

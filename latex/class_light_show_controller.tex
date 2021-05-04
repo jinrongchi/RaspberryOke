@@ -1,0 +1,153 @@
+\hypertarget{class_light_show_controller}{}\doxysection{Light\+Show\+Controller Class Reference}
+\label{class_light_show_controller}\index{LightShowController@{LightShowController}}
+
+
+{\ttfamily \#include $<$lightshowcontroller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_show_controller_a2f87ca592c2af8cf32492b5b76a85e57}{Light\+Show\+Controller}} (int t)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_light_show_controller_a74e8760c813cf10c3156c43dc3bbfa62}{$\sim$\+Light\+Show\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_show_controller_a869d85f0746199b02452488a286519f6}{blink\+Light}} (int time)
+\begin{DoxyCompactList}\small\item\em Blink a light. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_show_controller_a124f8fe67b36377380d2e8157f25ffb9}{start}} ()
+\begin{DoxyCompactList}\small\item\em Start the blinking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_show_controller_a528c26a089faf23c00ff5c016155061e}{blink\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_controls}{Controls}} the periodic blinking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_show_controller_a26ff793070058139a58d32b41d854774}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop the blinking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_light_show_controller_ab29378c1427318e73ef12d95b741bf42}{random\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Return a random number between 0 and 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_light_show_controller_aca6e9bb811ce2170a88071434ba36eb8}{tempo}}
+\item 
+bool \mbox{\hyperlink{class_light_show_controller_a491cca911726065cbe1f6e697673d29e}{blinking}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_show_controller_a2f87ca592c2af8cf32492b5b76a85e57}\label{class_light_show_controller_a2f87ca592c2af8cf32492b5b76a85e57}} 
+\index{LightShowController@{LightShowController}!LightShowController@{LightShowController}}
+\index{LightShowController@{LightShowController}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{LightShowController()}{LightShowController()}}
+{\footnotesize\ttfamily Light\+Show\+Controller\+::\+Light\+Show\+Controller (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The class constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tempo} & Sets up the G\+P\+IO pins for blinking the lights\\
+\hline
+{\em the} & tempo of the song \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_light_show_controller_a74e8760c813cf10c3156c43dc3bbfa62}\label{class_light_show_controller_a74e8760c813cf10c3156c43dc3bbfa62}} 
+\index{LightShowController@{LightShowController}!````~LightShowController@{$\sim$LightShowController}}
+\index{````~LightShowController@{$\sim$LightShowController}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{$\sim$LightShowController()}{~LightShowController()}}
+{\footnotesize\ttfamily Light\+Show\+Controller\+::$\sim$\+Light\+Show\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The class destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_show_controller_a528c26a089faf23c00ff5c016155061e}\label{class_light_show_controller_a528c26a089faf23c00ff5c016155061e}} 
+\index{LightShowController@{LightShowController}!blinkController@{blinkController}}
+\index{blinkController@{blinkController}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{blinkController()}{blinkController()}}
+{\footnotesize\ttfamily void Light\+Show\+Controller\+::blink\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_controls}{Controls}} the periodic blinking. 
+
+Blink light and sleep between beats of the song.
+
+One of the lights will be blinked, determined using a random number \mbox{\Hypertarget{class_light_show_controller_a869d85f0746199b02452488a286519f6}\label{class_light_show_controller_a869d85f0746199b02452488a286519f6}} 
+\index{LightShowController@{LightShowController}!blinkLight@{blinkLight}}
+\index{blinkLight@{blinkLight}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{blinkLight()}{blinkLight()}}
+{\footnotesize\ttfamily void Light\+Show\+Controller\+::blink\+Light (\begin{DoxyParamCaption}\item[{int}]{led\+Pin }\end{DoxyParamCaption})}
+
+
+
+Blink a light. 
+
+Blink the light connected to the specified pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & to blink\\
+\hline
+{\em the} & G\+P\+IO pin number of the light \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_light_show_controller_ab29378c1427318e73ef12d95b741bf42}\label{class_light_show_controller_ab29378c1427318e73ef12d95b741bf42}} 
+\index{LightShowController@{LightShowController}!randomNumber@{randomNumber}}
+\index{randomNumber@{randomNumber}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{randomNumber()}{randomNumber()}}
+{\footnotesize\ttfamily int Light\+Show\+Controller\+::random\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return a random number between 0 and 2. 
+
+\begin{DoxyReturn}{Returns}
+a random number between 0 and 2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_controller_a124f8fe67b36377380d2e8157f25ffb9}\label{class_light_show_controller_a124f8fe67b36377380d2e8157f25ffb9}} 
+\index{LightShowController@{LightShowController}!start@{start}}
+\index{start@{start}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Light\+Show\+Controller\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the blinking. 
+
+Activate the blinking by calling blink\+Controller. \mbox{\Hypertarget{class_light_show_controller_a26ff793070058139a58d32b41d854774}\label{class_light_show_controller_a26ff793070058139a58d32b41d854774}} 
+\index{LightShowController@{LightShowController}!stop@{stop}}
+\index{stop@{stop}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Light\+Show\+Controller\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop the blinking. 
+
+Stop the blinking and turn off the lights. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_light_show_controller_a491cca911726065cbe1f6e697673d29e}\label{class_light_show_controller_a491cca911726065cbe1f6e697673d29e}} 
+\index{LightShowController@{LightShowController}!blinking@{blinking}}
+\index{blinking@{blinking}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{blinking}{blinking}}
+{\footnotesize\ttfamily bool Light\+Show\+Controller\+::blinking\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_light_show_controller_aca6e9bb811ce2170a88071434ba36eb8}\label{class_light_show_controller_aca6e9bb811ce2170a88071434ba36eb8}} 
+\index{LightShowController@{LightShowController}!tempo@{tempo}}
+\index{tempo@{tempo}!LightShowController@{LightShowController}}
+\doxysubsubsection{\texorpdfstring{tempo}{tempo}}
+{\footnotesize\ttfamily int Light\+Show\+Controller\+::tempo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lightshowcontroller_8h}{lightshowcontroller.\+h}}\item 
+\mbox{\hyperlink{lightshowcontroller_8cpp}{lightshowcontroller.\+cpp}}\end{DoxyCompactItemize}

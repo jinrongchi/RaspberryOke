@@ -1,0 +1,251 @@
+\hypertarget{class_controls}{}\doxysection{Controls Class Reference}
+\label{class_controls}\index{Controls@{Controls}}
+
+
+{\ttfamily \#include $<$controls.\+h$>$}
+
+Inheritance diagram for Controls\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_controls}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_controls_a394db380f5a117608746000a02f6f86c}{set\+State}} (Q\+Media\+Player\+::\+State \mbox{\hyperlink{class_controls_aa4961e825b6ac5440257f0ae055a1e92}{state}})
+\begin{DoxyCompactList}\small\item\em Set the state of the media player, possible states consist of\+: stopped, playing, paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_controls_ac613067da4f8a951be747892a95a78ee}{play}} ()
+\begin{DoxyCompactList}\small\item\em A control button emitting \mbox{\hyperlink{class_controls_ac613067da4f8a951be747892a95a78ee}{play()}} signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controls_a277cfeab8b1b8131294f1a61415902ec}{pause}} ()
+\item 
+void \mbox{\hyperlink{class_controls_abcd261c1a0fe72dc44eb49bebbe0931a}{stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controls_aa3b84208b4557d25798507a3eac400cf}{Controls}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor of this class. \end{DoxyCompactList}\item 
+Q\+Media\+Player\+::\+State \mbox{\hyperlink{class_controls_aa4961e825b6ac5440257f0ae055a1e92}{state}} () const
+\begin{DoxyCompactList}\small\item\em Return the current state of the media player, and the default state is stopped state. \end{DoxyCompactList}\item 
+Q\+Group\+Box $\ast$ \mbox{\hyperlink{class_controls_a3b3ebbc39fc0604ee2508f396f70aa80}{get\+Group\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Getter method when arranging layout of the player interface, i.\+e. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_controls_a546f121f630c5c9db5094f6838d9fed2}{$\sim$\+Controls}} ()
+\begin{DoxyCompactList}\small\item\em Desctructor for the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_controls_a00acdb6bc98d7599f9cfe0ee9439998a}{play\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em a public slot that objects other than this class can also call to handle the situation when the play\+Button is Clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controls_a2a4417bb3efbe8042bbfa546f5af0459}{mirror\+Checked}} ()
+\begin{DoxyCompactList}\small\item\em handling the situation when the check\+Box is checked/unchecked \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ui_1_1_controls}{Ui\+::\+Controls}} $\ast$ \mbox{\hyperlink{class_controls_ac14161d68f32ee606e48b195e5bab38a}{ui}}
+\begin{DoxyCompactList}\small\item\em the ui widget for the class, ease of use for designing purpose. \end{DoxyCompactList}\item 
+Q\+Media\+Player\+::\+State \mbox{\hyperlink{class_controls_a20471fd785b28f4880b4c9a016d30c15}{player\+State}} = Q\+Media\+Player\+::\+Stopped\+State
+\begin{DoxyCompactList}\small\item\em player\+State of the media player, now set to default state\+: stopped. \end{DoxyCompactList}\item 
+Q\+Abstract\+Button $\ast$ \mbox{\hyperlink{class_controls_a70c85dad43577df962d897542dcd9b90}{play\+Button}}
+\begin{DoxyCompactList}\small\item\em play\+Button, stop\+Button, two controller buttons. \end{DoxyCompactList}\item 
+Q\+Abstract\+Button $\ast$ \mbox{\hyperlink{class_controls_a66b4fae3ce8240d899948cb592f24820}{stop\+Button}}
+\item 
+Q\+Check\+Box $\ast$ \mbox{\hyperlink{class_controls_a5766b1aecec8cfe15020715a1716c198}{check\+Box}}
+\begin{DoxyCompactList}\small\item\em a small check\+Box offering the user the option of voice monitoring \end{DoxyCompactList}\item 
+Q\+Group\+Box $\ast$ \mbox{\hyperlink{class_controls_a0a8dacef3f8ba8bee4924819138a865d}{controll\+\_\+unit}}
+\begin{DoxyCompactList}\small\item\em controll\+\_\+unit\+: bundle of all buttons \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controls_aa3b84208b4557d25798507a3eac400cf}\label{class_controls_aa3b84208b4557d25798507a3eac400cf}} 
+\index{Controls@{Controls}!Controls@{Controls}}
+\index{Controls@{Controls}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{Controls()}{Controls()}}
+{\footnotesize\ttfamily Controls\+::\+Controls (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor of this class. 
+
+Constructor of the class, setting up all the buttons, set them to default state/appearance. And connect each button to its corresponding handler to handle events invoked upon it. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+$<$ A check\+Box with text \char`\"{}\+Voice Monitoring\char`\"{}
+
+$<$ connecting signal(there\textquotesingle{}re things to be handled) to slot(the method that handle things)
+
+$<$ setting the layout of the player interface\mbox{\Hypertarget{class_controls_a546f121f630c5c9db5094f6838d9fed2}\label{class_controls_a546f121f630c5c9db5094f6838d9fed2}} 
+\index{Controls@{Controls}!````~Controls@{$\sim$Controls}}
+\index{````~Controls@{$\sim$Controls}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{$\sim$Controls()}{~Controls()}}
+{\footnotesize\ttfamily Controls\+::$\sim$\+Controls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desctructor for the class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controls_a3b3ebbc39fc0604ee2508f396f70aa80}\label{class_controls_a3b3ebbc39fc0604ee2508f396f70aa80}} 
+\index{Controls@{Controls}!getGroupBox@{getGroupBox}}
+\index{getGroupBox@{getGroupBox}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{getGroupBox()}{getGroupBox()}}
+{\footnotesize\ttfamily Q\+Group\+Box $\ast$ Controls\+::get\+Group\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method when arranging layout of the player interface, i.\+e. 
+
+where to put all the buttons. \begin{DoxyReturn}{Returns}
+A Q\+Group\+Box that will return a group of buttons (pointers) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controls_a2a4417bb3efbe8042bbfa546f5af0459}\label{class_controls_a2a4417bb3efbe8042bbfa546f5af0459}} 
+\index{Controls@{Controls}!mirrorChecked@{mirrorChecked}}
+\index{mirrorChecked@{mirrorChecked}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{mirrorChecked}{mirrorChecked}}
+{\footnotesize\ttfamily void Controls\+::mirror\+Checked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+handling the situation when the check\+Box is checked/unchecked 
+
+\begin{quote}
+pulseaudio package will handle voice monitoring \end{quote}
+\mbox{\Hypertarget{class_controls_a277cfeab8b1b8131294f1a61415902ec}\label{class_controls_a277cfeab8b1b8131294f1a61415902ec}} 
+\index{Controls@{Controls}!pause@{pause}}
+\index{pause@{pause}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{pause}{pause}}
+{\footnotesize\ttfamily void Controls\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_controls_ac613067da4f8a951be747892a95a78ee}\label{class_controls_ac613067da4f8a951be747892a95a78ee}} 
+\index{Controls@{Controls}!play@{play}}
+\index{play@{play}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{play}{play}}
+{\footnotesize\ttfamily void Controls\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+A control button emitting \mbox{\hyperlink{class_controls_ac613067da4f8a951be747892a95a78ee}{play()}} signal. 
+
+A signal is sent when a particular event occurs, and in this case, if a play signal is sent by a controller button, it is passing the message of the user wish to start play the song.
+
+\mbox{\hyperlink{class_controls_a277cfeab8b1b8131294f1a61415902ec}{pause()}}\+: the user wishes to pause the song \mbox{\hyperlink{class_controls_abcd261c1a0fe72dc44eb49bebbe0931a}{stop()}}\+: the user wishes to stop the song \mbox{\Hypertarget{class_controls_a00acdb6bc98d7599f9cfe0ee9439998a}\label{class_controls_a00acdb6bc98d7599f9cfe0ee9439998a}} 
+\index{Controls@{Controls}!playClicked@{playClicked}}
+\index{playClicked@{playClicked}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{playClicked}{playClicked}}
+{\footnotesize\ttfamily void Controls\+::play\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+a public slot that objects other than this class can also call to handle the situation when the play\+Button is Clicked. 
+
+\begin{quote}
+Q\+Media\+Player will take care from here \end{quote}
+\mbox{\Hypertarget{class_controls_a394db380f5a117608746000a02f6f86c}\label{class_controls_a394db380f5a117608746000a02f6f86c}} 
+\index{Controls@{Controls}!setState@{setState}}
+\index{setState@{setState}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{setState}{setState}}
+{\footnotesize\ttfamily void Controls\+::set\+State (\begin{DoxyParamCaption}\item[{Q\+Media\+Player\+::\+State}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set the state of the media player, possible states consist of\+: stopped, playing, paused. 
+
+This is a public slot, \char`\"{}a function that is called in response to a particular signal\char`\"{} sent by other objects. A slot can also be used as a normal class method. And in this case, the slot is responsible for change the state of the media player based on what signal it receives from the caller. 
+\begin{DoxyParams}{Parameters}
+{\em state} & set the current state to the state passed by parameter \\
+\hline
+\end{DoxyParams}
+\begin{quote}
+while changing the state, we are also changing the icon of play\+Button to pause\+Button \end{quote}
+\mbox{\Hypertarget{class_controls_aa4961e825b6ac5440257f0ae055a1e92}\label{class_controls_aa4961e825b6ac5440257f0ae055a1e92}} 
+\index{Controls@{Controls}!state@{state}}
+\index{state@{state}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily Q\+Media\+Player\+::\+State Controls\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the current state of the media player, and the default state is stopped state. 
+
+\begin{DoxyReturn}{Returns}
+Current state of the media player default Stopped\+State 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controls_abcd261c1a0fe72dc44eb49bebbe0931a}\label{class_controls_abcd261c1a0fe72dc44eb49bebbe0931a}} 
+\index{Controls@{Controls}!stop@{stop}}
+\index{stop@{stop}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily void Controls\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_controls_a5766b1aecec8cfe15020715a1716c198}\label{class_controls_a5766b1aecec8cfe15020715a1716c198}} 
+\index{Controls@{Controls}!checkBox@{checkBox}}
+\index{checkBox@{checkBox}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{checkBox}{checkBox}}
+{\footnotesize\ttfamily Q\+Check\+Box$\ast$ Controls\+::check\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+a small check\+Box offering the user the option of voice monitoring 
+
+\mbox{\Hypertarget{class_controls_a0a8dacef3f8ba8bee4924819138a865d}\label{class_controls_a0a8dacef3f8ba8bee4924819138a865d}} 
+\index{Controls@{Controls}!controll\_unit@{controll\_unit}}
+\index{controll\_unit@{controll\_unit}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{controll\_unit}{controll\_unit}}
+{\footnotesize\ttfamily Q\+Group\+Box$\ast$ Controls\+::controll\+\_\+unit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+controll\+\_\+unit\+: bundle of all buttons 
+
+\mbox{\Hypertarget{class_controls_a70c85dad43577df962d897542dcd9b90}\label{class_controls_a70c85dad43577df962d897542dcd9b90}} 
+\index{Controls@{Controls}!playButton@{playButton}}
+\index{playButton@{playButton}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{playButton}{playButton}}
+{\footnotesize\ttfamily Q\+Abstract\+Button$\ast$ Controls\+::play\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+play\+Button, stop\+Button, two controller buttons. 
+
+Noted\+: play\+Button can also be used as a pause\+Button, just the case of switching icon \mbox{\Hypertarget{class_controls_a20471fd785b28f4880b4c9a016d30c15}\label{class_controls_a20471fd785b28f4880b4c9a016d30c15}} 
+\index{Controls@{Controls}!playerState@{playerState}}
+\index{playerState@{playerState}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{playerState}{playerState}}
+{\footnotesize\ttfamily Q\+Media\+Player\+::\+State Controls\+::player\+State = Q\+Media\+Player\+::\+Stopped\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+player\+State of the media player, now set to default state\+: stopped. 
+
+\mbox{\Hypertarget{class_controls_a66b4fae3ce8240d899948cb592f24820}\label{class_controls_a66b4fae3ce8240d899948cb592f24820}} 
+\index{Controls@{Controls}!stopButton@{stopButton}}
+\index{stopButton@{stopButton}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{stopButton}{stopButton}}
+{\footnotesize\ttfamily Q\+Abstract\+Button$\ast$ Controls\+::stop\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_controls_ac14161d68f32ee606e48b195e5bab38a}\label{class_controls_ac14161d68f32ee606e48b195e5bab38a}} 
+\index{Controls@{Controls}!ui@{ui}}
+\index{ui@{ui}!Controls@{Controls}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ui_1_1_controls}{Ui\+::\+Controls}}$\ast$ Controls\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the ui widget for the class, ease of use for designing purpose. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{controls_8h}{controls.\+h}}\item 
+\mbox{\hyperlink{controls_8cpp}{controls.\+cpp}}\item 
+\mbox{\hyperlink{moc__controls_8cpp}{moc\+\_\+controls.\+cpp}}\end{DoxyCompactItemize}
